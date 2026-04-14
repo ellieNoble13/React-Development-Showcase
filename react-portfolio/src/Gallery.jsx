@@ -11,14 +11,12 @@ const Gallery = () => {
     const [index, setIndex] = useState(0);
 
     const handleNext = () => {
-        // Boundary check: ensure we don't go past the last item
         if (index < images.length - 1) {
             setIndex(index + 1);
         }
     };
 
     const handlePrev = () => {
-        // Boundary check: ensure we don't go below zero
         if (index > 0) {
             setIndex(index - 1);
         }
