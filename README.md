@@ -9,3 +9,4 @@ NPM Run Dev
 # Components
 
 Counter - This is a counter that uses useState
+Gallery - image gallery made in react
