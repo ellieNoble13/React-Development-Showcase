@@ -12,7 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-
+/* --- 2. HEADER & BRANDING --- */
 .studio-root {
   display: flex;
   flex-direction: column;
@@ -34,60 +34,48 @@ body {
   padding-bottom: 15px;
 }
 
-
 .main-title {
-  color: #000000 !important; /* Pure Black */
+  color: #000000 !important;
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -0.02em;
-  opacity: 1 !important;
-  visibility: visible !important;
 }
 
-
-.status-indicator {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.7rem;
+.subtitle {
+  font-size: 0.8rem;
   font-weight: 700;
-  text-transform: uppercase;
-  color: #6b7280;
+  color: #6366f1; /* Consistent Indigo */
+  margin-top: 2px;
 }
 
-.pulse-dot {
-  width: 8px;
-  height: 8px;
-  background-color: #22c55e;
-  border-radius: 50%;
-  position: relative;
-}
-
-.pulse-dot::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: inherit;
-  border-radius: inherit;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  100% { transform: scale(3.5); opacity: 0; }
-}
-
-
+/* --- 3. LAB SECTIONS --- */
 .studio-stage {
   flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 40px 20px;
+  gap: 80px; /* Space between the two assignments */
 }
 
-.counter-card {
+.lab-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  color: #000000 !important;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+/* --- 4. COMPONENT CARDS --- */
+.counter-card, .gallery-container {
   background: #ffffff;
   width: 100%;
   max-width: 500px;
@@ -97,6 +85,14 @@ body {
   text-align: center;
 }
 
+/* Internal Gallery Header */
+.gallery-container h2 {
+  color: #000000 !important;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 .count-display {
   font-size: 4rem;
   font-weight: 900;
@@ -104,12 +100,29 @@ body {
   color: #000000;
 }
 
+/* --- 5. GALLERY IMAGES (Fixed Sizing) --- */
+.recipe-image {
+  width: 100%;
+  height: 280px; /* Prevents card jumping */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #e5e7eb;
+}
 
+.recipe-description {
+  color: #000000;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+/* --- 6. BUTTONS & UI --- */
 .button-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  margin-top: 20px;
 }
 
 button {
@@ -124,26 +137,50 @@ button {
   transition: all 0.2s;
 }
 
-button:hover {
+button:hover:not(:disabled) {
   background: #e5e7eb;
   transform: translateY(-1px);
 }
 
-.fail-btn {
-  color: #dc2626;
-  background: #fef2f2;
-  border-color: #fecaca;
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
-.success-btn {
-  color: #16a34a;
-  background: #f0fdf4;
-  border-color: #bbf7d0;
+.fail-btn { color: #dc2626; background: #fef2f2; border-color: #fecaca; }
+.success-btn { color: #16a34a; background: #f0fdf4; border-color: #bbf7d0; }
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #6b7280;
 }
 
+.pulse-dot {
+  width: 8px; height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  position: relative;
+}
+
+.pulse-dot::after {
+  content: ''; position: absolute;
+  width: 100%; height: 100%;
+  background-color: inherit; border-radius: inherit;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(3.5); opacity: 0; }
+}
 
 .studio-footer {
-  padding: 30px;
+  padding: 40px;
   text-align: center;
   font-size: 0.65rem;
   color: #9ca3af;

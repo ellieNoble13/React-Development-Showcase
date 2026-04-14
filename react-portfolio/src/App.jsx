@@ -1,25 +1,39 @@
 import './App.css';
 import Counter from './Counter.jsx';
+import Gallery from './Gallery.jsx';
 
 function App() {
     return (
         <div className="studio-root">
             <header className="studio-header">
                 <div className="header-content">
-                    <h1 className="main-title">React State Lab</h1>
+                    <div className="title-block">
+                        <h1 className="main-title">React Development Portfolio</h1>
+                        <p className="subtitle">AD 312 // Intermediate Web Applications</p>
+                    </div>
                     <div className="status-indicator">
                         <span className="pulse-dot"></span>
-                        <span className="status-text">Active</span>
+                        <span className="status-text">Laboratory Active</span>
                     </div>
                 </div>
             </header>
 
             <main className="studio-stage">
-                <Counter />
+                {/* Lab 01: State Snapshots */}
+                <section className="lab-section">
+                    <h2 className="section-title">State Management & Snapshots</h2>
+                    <Counter />
+                </section>
+
+                {/* Lab 02: Recipe Gallery */}
+                <section className="lab-section">
+                    <h2 className="section-title">Interactive Index Navigation</h2>
+                    <Gallery />
+                </section>
             </main>
 
             <footer className="studio-footer">
-                <p>© 2026 Ellie Noble // Intermediate Development II</p>
+                <p>© 2026 Ellie Noble // North Seattle College</p>
             </footer>
         </div>
     );
