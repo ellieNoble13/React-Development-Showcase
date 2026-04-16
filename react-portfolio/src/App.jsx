@@ -1,6 +1,7 @@
 import './App.css';
 import Counter from './Counter.jsx';
 import Gallery from './Gallery.jsx';
+import UserProfile from './UserProfile.jsx';
 
 function App() {
     return (
@@ -30,7 +31,14 @@ function App() {
                     <h2 className="section-title">Interactive Index Navigation</h2>
                     <Gallery />
                 </section>
+
+                {/* Lab 03: State Change */}
+                <section className="lab-section">
+                    <h2 className="section-title">Nested State Immutability</h2>
+                    <UserProfile />
+                </section>
             </main>
+
 
             <footer className="studio-footer">
                 <p>© 2026 Ellie Noble // North Seattle College</p>

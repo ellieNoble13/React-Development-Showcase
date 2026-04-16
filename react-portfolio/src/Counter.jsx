@@ -23,7 +23,8 @@ const Counter = () => {
     };
 
     return (
-        <div className="counter-card">
+        <div className="lab-card">
+            <h2>Counters</h2>
             <div className="count-display">{count}</div>
 
             <div className="button-grid">

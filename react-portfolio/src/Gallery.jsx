@@ -25,7 +25,7 @@ const Gallery = () => {
     const recipe = images[index];
 
     return (
-        <div className="gallery-container">
+        <div className="lab-card">
             <h2>Sandwich Gallery</h2>
 
             <div className="recipe-card">
