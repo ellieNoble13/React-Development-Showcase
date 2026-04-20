@@ -17,3 +17,5 @@ Counter - This is a counter that uses useState
 Gallery - A Recipe Gallery
 
 UserProfile - An updatable porfile
+
+TaskManager - built to let people add and resolve tasks
