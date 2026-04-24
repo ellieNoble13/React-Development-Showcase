@@ -4,6 +4,7 @@ import Gallery from './Gallery.jsx';
 import UserProfile from './UserProfile.jsx';
 import TaskManager from "./TaskManager.jsx";
 import ShoppingListWithImmer from "./ShoppingListWithImmer.jsx";
+import UserProfileImmer from "./UserProfileImmer.jsx";
 
 function App() {
     return (
@@ -45,11 +46,19 @@ function App() {
                 <h2 className="section-title">Task Manager</h2>
                 <TaskManager/>
             </section>
-                {/* Lab 05: Shopping List With Immer*/}
-                <section className="lab-section">
-                    <h2 className="section-title">Shopping List with Immer</h2>
-                    <ShoppingListWithImmer />
-                </section>
+
+            {/* Lab 05: Shopping List With Immer*/}
+            <section className="lab-section">
+                <h2 className="section-title">Shopping List with Immer</h2>
+                 <ShoppingListWithImmer />
+            </section>
+
+            {/* Lab 05:  User Profile With Immer*/}
+            <section className="lab-section">
+                <h2 className="section-title"> User Profile with Immer</h2>
+                <UserProfileImmer />
+            </section>
+
 
         </main>
 

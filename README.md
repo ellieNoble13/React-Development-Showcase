@@ -20,4 +20,6 @@ UserProfile - An updatable porfile
 
 TaskManager - built to let people add and resolve tasks
 
-ShoppingList - Managed UseState and Arrays wtih Immer (This one is quite cool)
+ShoppingListWithImmer - Managed UseState and Arrays wtih Immer (This one is quite cool)
+
+UserProfileImmer - A funky user profile that uses Immer to keep states updated
