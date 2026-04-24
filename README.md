@@ -19,3 +19,5 @@ Gallery - A Recipe Gallery
 UserProfile - An updatable porfile
 
 TaskManager - built to let people add and resolve tasks
+
+ShoppingList - Managed UseState and Arrays wtih Immer (This one is quite cool)

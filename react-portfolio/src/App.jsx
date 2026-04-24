@@ -3,6 +3,7 @@ import Counter from './Counter.jsx';
 import Gallery from './Gallery.jsx';
 import UserProfile from './UserProfile.jsx';
 import TaskManager from "./TaskManager.jsx";
+import ShoppingListWithImmer from "./ShoppingListWithImmer.jsx";
 
 function App() {
     return (
@@ -41,9 +42,15 @@ function App() {
 
             {/* Lab 04: TaskManager */}
             <section className="lab-section">
-                <h2 className="section-title">Nested State Immutability</h2>
+                <h2 className="section-title">Task Manager</h2>
                 <TaskManager/>
             </section>
+                {/* Lab 05: Shopping List With Immer*/}
+                <section className="lab-section">
+                    <h2 className="section-title">Shopping List with Immer</h2>
+                    <ShoppingListWithImmer />
+                </section>
+
         </main>
 
 
