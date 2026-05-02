@@ -6,6 +6,7 @@ import TaskManager from "./TaskManager.jsx";
 import ShoppingListWithImmer from "./ShoppingListWithImmer.jsx";
 import UserProfileImmer from "./UserProfileImmer.jsx";
 import DogLaboratory from './DogQueryApp.jsx'
+import PostManager from "./PostManager.jsx";
 
 function App() {
     return (
@@ -66,6 +67,11 @@ function App() {
                     <DogLaboratory />
                 </section>
 
+                {/* lab 07: TanStack Mock API App*/}
+                <section className="lab-section">
+                    <h2 className="section-title">TanStack Mock API</h2>
+                    <PostManager />
+                </section>
 
         </main>
 
