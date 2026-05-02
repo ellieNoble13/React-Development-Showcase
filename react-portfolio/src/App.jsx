@@ -5,6 +5,7 @@ import UserProfile from './UserProfile.jsx';
 import TaskManager from "./TaskManager.jsx";
 import ShoppingListWithImmer from "./ShoppingListWithImmer.jsx";
 import UserProfileImmer from "./UserProfileImmer.jsx";
+import DogLaboratory from './DogQueryApp.jsx'
 
 function App() {
     return (
@@ -44,7 +45,7 @@ function App() {
             {/* Lab 04: TaskManager */}
             <section className="lab-section">
                 <h2 className="section-title">Task Manager</h2>
-                <TaskManager/>
+                <TaskManager />
             </section>
 
             {/* Lab 05: Shopping List With Immer*/}
@@ -58,6 +59,12 @@ function App() {
                 <h2 className="section-title"> User Profile with Immer</h2>
                 <UserProfileImmer />
             </section>
+
+                {/* Lab 06: Dog API Explorer */}
+                <section className="lab-section">
+                    <h2 className="section-title">Dog API Explorer</h2>
+                    <DogLaboratory />
+                </section>
 
 
         </main>
