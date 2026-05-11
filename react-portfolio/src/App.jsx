@@ -1,86 +1,45 @@
-import './App.css';
-import Counter from './Counter.jsx';
-import Gallery from './Gallery.jsx';
-import UserProfile from './UserProfile.jsx';
-import TaskManager from "./TaskManager.jsx";
-import ShoppingListWithImmer from "./ShoppingListWithImmer.jsx";
-import UserProfileImmer from "./UserProfileImmer.jsx";
-import DogLaboratory from './DogQueryApp.jsx'
-import PostManager from "./PostManager.jsx";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// Layout & Hub
+import MainLayout from './components/MainLayout';
+import LandingPage from './pages/LandingPage';
+import About from './pages/About';
+
+// Import All Labs
+import Counter from './pages/Counter';
+import DogQueryApp from './pages/DogQueryApp';
+import Gallery from './pages/Gallery';
+import PostManager from './pages/PostManager';
+import ShoppingListWithImmer from './pages/ShoppingListWithImmer';
+import TaskManager from './pages/TaskManager';
+import UserProfile from './pages/UserProfile';
+import UserProfileImmer from './pages/UserProfileImmer';
 
 function App() {
     return (
-        <div className="studio-root">
-            <header className="studio-header">
-                <div className="header-content">
-                    <div className="title-block">
-                        <h1 className="main-title">React Development Portfolio</h1>
-                        <p className="subtitle">AD 312 // Intermediate Web Applications</p>
-                    </div>
-                    <div className="status-indicator">
-                        <span className="pulse-dot"></span>
-                        <span className="status-text">Laboratory Active</span>
-                    </div>
-                </div>
-            </header>
+        <BrowserRouter>
+            <Routes>
+                {/* MainLayout provides the Header, Nav, and Footer */}
+                <Route path="/" element={<MainLayout />}>
 
-            <main className="studio-stage">
-                {/* Lab 01: State Snapshots */}
-                <section className="lab-section">
-                    <h2 className="section-title">State Management & Snapshots</h2>
-                    <Counter />
-                </section>
+                    {/* This is the first thing users see at the root URL */}
+                    <Route index element={<LandingPage />} />
 
-                {/* Lab 02: Recipe Gallery */}
-                <section className="lab-section">
-                    <h2 className="section-title">Interactive Index Navigation</h2>
-                    <Gallery />
-                </section>
+                    {/* Individual Lab Routes */}
+                    <Route path="lab/counter" element={<Counter />} />
+                    <Route path="lab/dogs" element={<DogQueryApp />} />
+                    <Route path="lab/gallery" element={<Gallery />} />
+                    <Route path="lab/posts" element={<PostManager />} />
+                    <Route path="lab/shopping" element={<ShoppingListWithImmer />} />
+                    <Route path="lab/tasks" element={<TaskManager />} />
+                    <Route path="lab/profile-basic" element={<UserProfile />} />
+                    <Route path="lab/profile-immer" element={<UserProfileImmer />} />
 
-                {/* Lab 03: State Change */}
-                <section className="lab-section">
-                    <h2 className="section-title">Nested State Immutability</h2>
-                    <UserProfile />
-                </section>
-
-            {/* Lab 04: TaskManager */}
-            <section className="lab-section">
-                <h2 className="section-title">Task Manager</h2>
-                <TaskManager />
-            </section>
-
-            {/* Lab 05: Shopping List With Immer*/}
-            <section className="lab-section">
-                <h2 className="section-title">Shopping List with Immer</h2>
-                 <ShoppingListWithImmer />
-            </section>
-
-            {/* Lab 05:  User Profile With Immer*/}
-            <section className="lab-section">
-                <h2 className="section-title"> User Profile with Immer</h2>
-                <UserProfileImmer />
-            </section>
-
-                {/* Lab 06: Dog API Explorer */}
-                <section className="lab-section">
-                    <h2 className="section-title">Dog API Explorer</h2>
-                    <DogLaboratory />
-                </section>
-
-                {/* lab 07: TanStack Mock API App*/}
-                <section className="lab-section">
-                    <h2 className="section-title">TanStack Mock API</h2>
-                    <PostManager />
-                </section>
-
-        </main>
-
-
-
-    <footer className="studio-footer">
-                <p>© 2026 Ellie Noble // North Seattle College</p>
-            </footer>
-        </div>
+                    {/* About Page*/}
+                    <Route path="about" element={<About />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
     );
 }
 
