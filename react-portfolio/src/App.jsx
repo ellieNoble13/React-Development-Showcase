@@ -14,6 +14,8 @@ import ShoppingListWithImmer from './pages/ShoppingListWithImmer';
 import TaskManager from './pages/TaskManager';
 import UserProfile from './pages/UserProfile';
 import UserProfileImmer from './pages/UserProfileImmer';
+import BlogHome from './pages/BlogHome';
+import PostView from './pages/PostView.jsx';
 
 function App() {
     return (
@@ -34,6 +36,8 @@ function App() {
                     <Route path="lab/tasks" element={<TaskManager />} />
                     <Route path="lab/profile-basic" element={<UserProfile />} />
                     <Route path="lab/profile-immer" element={<UserProfileImmer />} />
+                    <Route path="blog" element={<BlogHome />} />
+                    <Route path="blog/post/:postId" element={<PostView />} />
 
                     {/* About Page*/}
                     <Route path="about" element={<About />} />
