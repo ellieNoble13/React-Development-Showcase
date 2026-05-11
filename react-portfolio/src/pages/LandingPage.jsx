@@ -5,21 +5,15 @@ const LandingPage = () => {
         {
             category: "Dynamic Content",
             items: [
-                { path: "/blog", title: "Multi Page Blog", desc: "Multi-page blog with dynamic routing and useParams." }
+                { path: "/blog", title: "Blog", desc: "Multi-page blog with dynamic routing and useParams." },
+                { path: "/lab/gallery", title: "Recipe Gallery v2", desc: "Transitioning from local state to dynamic URL parameters." }
             ]
         },
         {
-            category: "Data & APIs",
+            category: "Server-State & APIs",
             items: [
                 { path: "/lab/dogs", title: "Dog API Explorer", desc: "TanStack Query fetching & caching." },
                 { path: "/lab/posts", title: "CRUD Operations", desc: "Full Server-State management (REST)." }
-            ]
-        },
-        {
-            category: "UI & Layout (Phase 3 Prep)",
-            items: [
-                { path: "/lab/gallery", title: "Recipe Gallery", desc: "Responsive grid layout and media handling." },
-                { path: "/lab/tasks", title: "Task Manager", desc: "Filtering and persistent list logic." }
             ]
         },
         {
@@ -27,8 +21,8 @@ const LandingPage = () => {
             items: [
                 { path: "/lab/shopping", title: "Immer Shopping", desc: "Complex list state with useImmer." },
                 { path: "/lab/profile-immer", title: "User Profile (Immer)", desc: "Deeply nested object updates." },
-                { path: "/lab/profile-basic", title: "User Profile (Basic)", desc: "Standard object state patterns." },
-                { path: "/lab/counter", title: "Counter Basics", desc: "The fundamental useState counter." }
+                { path: "/lab/tasks", title: "Task Manager", desc: "Filtering and persistent list logic." },
+                { path: "/lab/counter", title: "Basics", desc: "Fundamental useState patterns." }
             ]
         }
     ];
@@ -37,7 +31,7 @@ const LandingPage = () => {
         <div className="lab-card">
             <h2 className="main-title">Project Laboratory</h2>
             <p className="subtitle" style={{ marginBottom: '30px' }}>
-                Select A Lab
+                Select a Lab
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
@@ -49,13 +43,7 @@ const LandingPage = () => {
 
                         <div className="grid-halves" style={{ gap: '12px' }}>
                             {group.items.map((item, iIndex) => (
-                                <Link key={iIndex} to={item.path} className="list-item" style={{
-                                    textDecoration: 'none',
-                                    padding: '15px',
-                                    border: '1px solid #e5e7eb',
-                                    borderRadius: '12px',
-                                    display: 'block'
-                                }}>
+                                <Link key={iIndex} to={item.path} className="list-item">
                                     <strong style={{ color: '#6366f1', display: 'block', fontSize: '0.85rem' }}>
                                         {item.title}
                                     </strong>

@@ -16,6 +16,7 @@ import UserProfile from './pages/UserProfile';
 import UserProfileImmer from './pages/UserProfileImmer';
 import BlogHome from './pages/BlogHome';
 import PostView from './pages/PostView.jsx';
+import RecipeDetail from "./pages/RecipeDetail.jsx";
 
 function App() {
     return (
@@ -38,6 +39,7 @@ function App() {
                     <Route path="lab/profile-immer" element={<UserProfileImmer />} />
                     <Route path="blog" element={<BlogHome />} />
                     <Route path="blog/post/:postId" element={<PostView />} />
+                    <Route path="recipe/:id" element={<RecipeDetail />} />
 
                     {/* About Page*/}
                     <Route path="about" element={<About />} />

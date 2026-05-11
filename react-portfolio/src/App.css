@@ -300,3 +300,17 @@ button:disabled {
   color: #4b5563;
   border: 1px solid #d1d5db;
 }
+
+.list-item {
+  padding: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.list-item:hover {
+  transform: translateY(-2px);
+  border-color: #6366f1; /* Your accent color */
+}
