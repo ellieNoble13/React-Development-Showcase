@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // Layout & Hub
 import MainLayout from './components/MainLayout';
 import LandingPage from './pages/LandingPage';
 import About from './pages/About';
+import './App.css'
 
 // Import All Labs
 import Counter from './pages/Counter';
@@ -18,34 +20,36 @@ import BlogHome from './pages/BlogHome';
 import PostView from './pages/PostView.jsx';
 import RecipeDetail from "./pages/RecipeDetail.jsx";
 
+
+const queryClient = new QueryClient();
+
 function App() {
     return (
-        <BrowserRouter>
-            <Routes>
-                {/* MainLayout provides the Header, Nav, and Footer */}
-                <Route path="/" element={<MainLayout />}>
 
-                    {/* This is the first thing users see at the root URL */}
-                    <Route index element={<LandingPage />} />
+        <QueryClientProvider client={queryClient}>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<MainLayout />}>
+                        <Route index element={<LandingPage />} />
 
-                    {/* Individual Lab Routes */}
-                    <Route path="lab/counter" element={<Counter />} />
-                    <Route path="lab/dogs" element={<DogQueryApp />} />
-                    <Route path="lab/gallery" element={<Gallery />} />
-                    <Route path="lab/posts" element={<PostManager />} />
-                    <Route path="lab/shopping" element={<ShoppingListWithImmer />} />
-                    <Route path="lab/tasks" element={<TaskManager />} />
-                    <Route path="lab/profile-basic" element={<UserProfile />} />
-                    <Route path="lab/profile-immer" element={<UserProfileImmer />} />
-                    <Route path="blog" element={<BlogHome />} />
-                    <Route path="blog/post/:postId" element={<PostView />} />
-                    <Route path="recipe/:id" element={<RecipeDetail />} />
+                        {/* Ensure these paths match your LandingPage links */}
+                        <Route path="lab/counter" element={<Counter />} />
+                        <Route path="lab/dogs" element={<DogQueryApp />} />
+                        <Route path="lab/gallery" element={<Gallery />} />
+                        <Route path="lab/posts" element={<PostManager />} />
+                        <Route path="lab/shopping" element={<ShoppingListWithImmer />} />
+                        <Route path="lab/tasks" element={<TaskManager />} />
+                        <Route path="lab/profile-basic" element={<UserProfile />} />
+                        <Route path="lab/profile-immer" element={<UserProfileImmer />} />
 
-                    {/* About Page*/}
-                    <Route path="about" element={<About />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
+                        <Route path="blog" element={<BlogHome />} />
+                        <Route path="blog/post/:postId" element={<PostView />} />
+                        <Route path="recipe/:id" element={<RecipeDetail />} />
+                        <Route path="about" element={<About />} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </QueryClientProvider>
     );
 }
 
