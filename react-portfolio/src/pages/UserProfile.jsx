@@ -1,59 +1,51 @@
-import {useState} from 'react'
+import { useState } from 'react';
+import { useUser } from '../context/UserContext';
 
 const UserProfile = () => {
-const [userProfile, setUserProfile] = useState({
-    name: 'Example McGee',
-    email: 'example.mcgee@fakeemail.net',
-    address: {
-        street: '123 Example Street',
-        city: 'Anytown',
-        country: 'USA'
-    }
-});
+    // Reads 'user' and 'updateUserAddress' directly from the code above
+    const { user, updateUserAddress } = useUser();
 
-const [tempAddress, setTempAddress] = useState({
-    street: '',
-    city: '',
-    country: ''
-});
+    const [tempAddress, setTempAddress] = useState({
+        street: '',
+        city: '',
+        country: ''
+    });
 
-    const updateAddress = () => {
-        setUserProfile({
-            ...userProfile,
-            address: {
-                ...userProfile.address,
-                street: tempAddress.street || userProfile.address.street,
-                city: tempAddress.city || userProfile.address.city,
-                country: tempAddress.country || userProfile.address.country
-            }
-        });
+    const handleUpdate = () => {
+        updateUserAddress(tempAddress);
+        setTempAddress({ street: '', city: '', country: '' });
     };
+
     return (
         <div className="lab-card">
             <h2>Profile Management</h2>
 
-            <div className="display-box" style={{textAlign: 'left', margin: '20px 0'}}>
-                <p><strong>Name:</strong> {userProfile.name}</p>
-                <p><strong>Address:</strong> {userProfile.address.street}, {userProfile.address.city}, {userProfile.address.country}</p>
+            <div className="display-box" style={{ textAlign: 'left', margin: '20px 0' }}>
+                <p><strong>Name:</strong> {user.name}</p>
+                <p><strong>Email:</strong> {user.email}</p>
+                <p><strong>Address:</strong> {user.address.street}, {user.address.city}, {user.address.country}</p>
             </div>
 
-            <div className="button-grid" style={{flexDirection: 'column'}}>
+            <div className="button-grid" style={{ flexDirection: 'column', gap: '10px' }}>
                 <input
                     type="text"
                     placeholder="New Street"
-                    onChange={(e) => setTempAddress({...tempAddress, street: e.target.value})}
+                    value={tempAddress.street}
+                    onChange={(e) => setTempAddress({ ...tempAddress, street: e.target.value })}
                 />
                 <input
                     type="text"
                     placeholder="New City"
-                    onChange={(e) => setTempAddress({...tempAddress, city: e.target.value})}
+                    value={tempAddress.city}
+                    onChange={(e) => setTempAddress({ ...tempAddress, city: e.target.value })}
                 />
                 <input
                     type="text"
                     placeholder="New Country"
-                    onChange={(e) => setTempAddress({...tempAddress, country: e.target.value})}
+                    value={tempAddress.country}
+                    onChange={(e) => setTempAddress({ ...tempAddress, country: e.target.value })}
                 />
-                <button onClick={updateAddress} className="success-btn">Update Address</button>
+                <button onClick={handleUpdate} className="success-btn">Update Address</button>
             </div>
         </div>
     );

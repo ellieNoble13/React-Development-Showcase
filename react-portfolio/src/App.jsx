@@ -32,7 +32,6 @@ function App() {
                     <Route path="/" element={<MainLayout />}>
                         <Route index element={<LandingPage />} />
 
-                        {/* Ensure these paths match your LandingPage links */}
                         <Route path="lab/counter" element={<Counter />} />
                         <Route path="lab/dogs" element={<DogQueryApp />} />
                         <Route path="lab/gallery" element={<Gallery />} />
@@ -41,6 +40,7 @@ function App() {
                         <Route path="lab/tasks" element={<TaskManager />} />
                         <Route path="lab/profile-basic" element={<UserProfile />} />
                         <Route path="lab/profile-immer" element={<UserProfileImmer />} />
+                        <Route path="lab/basic-profile" element={<UserProfile />} />
 
                         <Route path="blog" element={<BlogHome />} />
                         <Route path="blog/post/:postId" element={<PostView />} />

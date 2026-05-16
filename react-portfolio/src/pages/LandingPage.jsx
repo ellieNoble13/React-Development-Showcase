@@ -21,8 +21,9 @@ const LandingPage = () => {
             items: [
                 { path: "/lab/shopping", title: "Immer Shopping", desc: "Complex list state with useImmer." },
                 { path: "/lab/profile-immer", title: "User Profile (Immer)", desc: "Deeply nested object updates." },
+                { path: "/lab/basic-profile", title: "User Profile", desc: "Now with context API!"},
                 { path: "/lab/tasks", title: "Task Manager", desc: "Filtering and persistent list logic." },
-                { path: "/lab/counter", title: "Basics", desc: "Fundamental useState patterns." }
+                { path: "/lab/counter", title: "Counter With Use State", desc: "Fundamental useState patterns." }
             ]
         }
     ];
