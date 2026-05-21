@@ -19,6 +19,7 @@ import UserProfileImmer from './pages/UserProfileImmer';
 import BlogHome from './pages/BlogHome';
 import PostView from './pages/PostView.jsx';
 import RecipeDetail from "./pages/RecipeDetail.jsx";
+import RegistrationForm from "./pages/RegistrationForm.jsx";
 
 
 const queryClient = new QueryClient();
@@ -41,7 +42,7 @@ function App() {
                         <Route path="lab/profile-basic" element={<UserProfile />} />
                         <Route path="lab/profile-immer" element={<UserProfileImmer />} />
                         <Route path="lab/basic-profile" element={<UserProfile />} />
-
+                        <Route path="lab/registration" element={<RegistrationForm />} />
                         <Route path="blog" element={<BlogHome />} />
                         <Route path="blog/post/:postId" element={<PostView />} />
                         <Route path="recipe/:id" element={<RecipeDetail />} />
