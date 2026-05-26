@@ -7,7 +7,8 @@ const LandingPage = () => {
             items: [
                 { path: "/blog", title: "Blog", desc: "Multi-page blog with dynamic routing and useParams." },
                 { path: "/lab/gallery", title: "Recipe Gallery v2", desc: "Transitioning from local state to dynamic URL parameters." },
-                { path: "/lab/registration", title: "User Registration", desc: "Form verification using React Hook Form." }
+                { path: "/lab/registration", title: "User Registration", desc: "Form verification using React Hook Form." },
+                { path: "/lab/profile-mutation", title: "Server Profile Form", desc: "TanStack queries with React Hook Form." }
             ]
         },
         {

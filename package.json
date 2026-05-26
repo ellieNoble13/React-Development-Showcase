@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "json-server": "^1.0.0-beta.15",
     "use-immer": "^0.11.0"
   }
 }

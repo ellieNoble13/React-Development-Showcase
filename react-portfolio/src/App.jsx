@@ -20,6 +20,7 @@ import BlogHome from './pages/BlogHome';
 import PostView from './pages/PostView.jsx';
 import RecipeDetail from "./pages/RecipeDetail.jsx";
 import RegistrationForm from "./pages/RegistrationForm.jsx";
+import ProfileMutationForm from "./pages/ProfileMutationForm.jsx";
 
 
 const queryClient = new QueryClient();
@@ -47,6 +48,7 @@ function App() {
                         <Route path="blog/post/:postId" element={<PostView />} />
                         <Route path="recipe/:id" element={<RecipeDetail />} />
                         <Route path="about" element={<About />} />
+                        <Route path="lab/profile-mutation" element={<ProfileMutationForm />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
