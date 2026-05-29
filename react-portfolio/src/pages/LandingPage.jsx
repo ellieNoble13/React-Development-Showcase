@@ -9,6 +9,7 @@ const LandingPage = () => {
                 { path: "/lab/gallery", title: "Recipe Gallery v2", desc: "Transitioning from local state to dynamic URL parameters." },
                 { path: "/lab/registration", title: "User Registration", desc: "Form verification using React Hook Form." },
                 { path: "/lab/canvas", title:"Dynamic Canvas", desc: "Live canvas that tracks window size"},
+                { path: "/lab/pokemonvote", title:"Pokemon Vote", desc: "Using Chart.js, vote for your favorite Pokemon"}
                ]
         },
         {
