@@ -11,8 +11,9 @@ const LandingPage = () => {
                 { path: "/lab/gallery", title: "Recipe Gallery v2", desc: "Transitioning from local state to dynamic URL parameters." },
                 { path: "/lab/registration", title: "User Registration", desc: "Form verification using React Hook Form." },
                 { path: "/lab/canvas", title:"Dynamic Canvas", desc: "Live canvas that tracks window size"},
-                { path: "/lab/pokemonvote", title:"Pokemon Vote", desc: "Using Chart.js, vote for your favorite Pokemon"}
-               ]
+                { path: "/lab/pokemonvote", title:"Pokemon Vote", desc: "Using Chart.js, vote for your favorite Pokemon"},
+                { path: "/lab/local-storage", title: "Custom LocalStorage Hook", desc: "State management persistence layer extracted into a reusable react custom hook configuration." }
+            ]
         },
         {
             category: "Server-State & APIs",
@@ -31,18 +32,19 @@ const LandingPage = () => {
                 { path: "/lab/basic-profile", title: "User Profile", desc: "Now with context API!"},
                 { path: "/lab/tasks", title: "Task Manager", desc: "Filtering and persistent list logic." },
                 { path: "/lab/counter", title: "Counter With Use State", desc: "Fundamental useState patterns." }
-            ]
+                ]
         }
     ];
     const {width, height} =  useWindowSize ()
     return (
         <div className="lab-card">
             <h2 className="main-title">Project Laboratory</h2>
-            <dv>
-                { (() =>{
-                    if(width < 768) return <h2 className="subtitle">Mobile</h2>
-                    else return <h2 className="subtitle">Desktop</h2>})()}
-            </dv>
+            <div>
+                {(() => {
+                    if (width < 768) return <h2 className="subtitle">Mobile</h2>;
+                    else return <h2 className="subtitle">Desktop</h2>;
+                })()}
+            </div>
             <p className="subtitle" style={{ marginBottom: '30px' }}>
                 Select a Lab
             </p>

@@ -23,6 +23,7 @@ import RegistrationForm from "./pages/RegistrationForm.jsx";
 import ProfileMutationForm from "./pages/ProfileMutationForm.jsx";
 import InteractiveCanvas from "./pages/InteractiveCanvas.jsx";
 import PokemonChart from "./pages/PokemonChart.jsx";
+import ThemeSettingsLab from "./pages/ThemeSettingsLab.jsx";
 
 
 const queryClient = new QueryClient();
@@ -53,6 +54,7 @@ function App() {
                         <Route path="lab/profile-mutation" element={<ProfileMutationForm />} />
                         <Route path="lab/canvas" element={<InteractiveCanvas />} />
                         <Route path="lab/pokemonvote" element={<PokemonChart />} />
+                        <Route path="lab/local-storage" element={<ThemeSettingsLab />} />
 
                     </Route>
                 </Routes>
