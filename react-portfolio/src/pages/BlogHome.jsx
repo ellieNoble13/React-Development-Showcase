@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
 import { posts } from '../data/posts';
-
+import { useWindowSize } from '../utils/useWindowSize.jsx';
 const BlogHome = () => {
     return (
         <div className="lab-card text-left">
             <h2 className="main-title">Blog Feed</h2>
             <p className="subtitle">Select a post to read the full content</p>
-
             <div className="scroll-list mt-2">
                 {posts.map((post) => (
                     <Link

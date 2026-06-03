@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import {posts} from "../data/posts.js";
+import {useWindowSize} from "../utils/useWindowSize.jsx";
 
 const LandingPage = () => {
     const labGroups = [
@@ -32,10 +34,15 @@ const LandingPage = () => {
             ]
         }
     ];
-
+    const {width, height} =  useWindowSize ()
     return (
         <div className="lab-card">
             <h2 className="main-title">Project Laboratory</h2>
+            <dv>
+                { (() =>{
+                    if(width < 768) return <h2 className="subtitle">Mobile</h2>
+                    else return <h2 className="subtitle">Desktop</h2>})()}
+            </dv>
             <p className="subtitle" style={{ marginBottom: '30px' }}>
                 Select a Lab
             </p>
