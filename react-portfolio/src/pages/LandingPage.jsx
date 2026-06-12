@@ -12,7 +12,8 @@ const LandingPage = () => {
                 { path: "/lab/registration", title: "User Registration", desc: "Form verification using React Hook Form." },
                 { path: "/lab/canvas", title:"Dynamic Canvas", desc: "Live canvas that tracks window size"},
                 { path: "/lab/pokemonvote", title:"Pokemon Vote", desc: "Using Chart.js, vote for your favorite Pokemon"},
-                { path: "/lab/local-storage", title: "Custom LocalStorage Hook", desc: "State management persistence layer extracted into a reusable react custom hook configuration." }
+                { path: "/lab/local-storage", title: "Custom LocalStorage Hook", desc: "State management persistence layer extracted into a reusable react custom hook configuration." },
+                { path: "/lab/fault-lab", title: "Fault Tolerence Shield", desc: "Using Error Bounderies to isolate runtime failures" },
             ]
         },
         {
